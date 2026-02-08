@@ -10,7 +10,7 @@ const APP = {
   registerSW() {
     if ('serviceWorker' in navigator) {
       // Register a service worker hosted at the root of the site
-      navigator.serviceWorker.register('/sw.js').then(
+      navigator.serviceWorker.register('./sw.js').then(
         (registration) => {
           APP.SW =
             registration.installing ||
@@ -27,7 +27,7 @@ const APP = {
   },
   addImage(ev) {
     let img = document.createElement('img');
-    img.src = '/img/laptop.jpg';
+    img.src = 'img/laptop.jpg';
     img.alt = 'dynamically added image';
     let p = document.createElement('p');
     p.append(img);
