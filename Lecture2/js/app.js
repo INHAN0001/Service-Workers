@@ -15,13 +15,13 @@ const APP = {
       .then((cache) => {
         console.log(`Cache ${APP.cacheName} opened`);
 
-        let urlString = '/img/1011-800x600.jpg?id=one';
+        let urlString = '/img/laptop.jpg?id=one';
         cache.add(urlString); //add = fetch + put
 
-        let url = new URL('http://127.0.0.1:5500/img/1011-800x600.jpg?id=two');
+        let url = new URL('http://127.0.0.1:5500/img/laptop.jpg?id=two');
         cache.add(url);
 
-        let req = new Request('/img/1011-800x600.jpg?id=three');
+        let req = new Request('/img/laptop.jpg?id=three');
         cache.add(req);
 
         cache.keys().then((keys) => {
