@@ -1,10 +1,10 @@
-const version = 5;
+const version = 6;
 let staticName = `staticCache-${version}`;
 let dynamicName = `dynamicCache`;
 let fontName = 'fontCache';
 let imgName = 'imageCache';
 
-let assets = ['/', '/index.html', '/css/main.css', '/js/app.js'];
+let assets = ['./', './index.html', './css/main.css', './js/app.js'];
 
 self.addEventListener('install', (ev) => {
   // service worker has been installed.
