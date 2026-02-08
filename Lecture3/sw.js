@@ -22,6 +22,23 @@ self.addEventListener('install', (ev) => {
   );
   // self.skipWaiting(); //skip waiting to activate
   //but... the page will not use the new sw yet
+//   Even if the new service worker is activated:
+
+// Existing open pages are still controlled by the old service worker
+
+// The new service worker is active, but not controlling any clients yet
+
+// So:
+
+// skipWaiting() → activates immediately
+
+// But does NOT automatically attach to open pages
+
+// Those pages will keep using the old worker until:
+
+// They are reloaded, or
+
+// You explicitly claim them
 });
 
 function teja() {
